@@ -11,8 +11,13 @@ var __slice = [].slice;
   } else {
     return root.Backbone.Module = factory(root.Backbone, root._);
   }
-})(this, function(Backbone, _) {
-  var Module;
+})(this, function(Backbone, _arg) {
+  var Module, extend;
+  extend = _arg.extend;
+  extend(Backbone.Model, Module);
+  extend(Backbone.View, Module);
+  extend(Backbone.Collection, Module);
+  extend(Backbone.Router, Module);
   return Module = (function() {
 
     function Module() {}
@@ -24,7 +29,9 @@ var __slice = [].slice;
       for (_i = 0, _len = mixins.length; _i < _len; _i++) {
         mixin = mixins[_i];
         for (k in mixin) {
-          this[k] = mixin[k];
+          if (key !== 'included' && key !== 'extended') {
+            this[k] = mixin[k];
+          }
         }
         if (mixin.extended != null) {
           _results.push(mixin.extended(this));
@@ -42,7 +49,9 @@ var __slice = [].slice;
       for (_i = 0, _len = mixins.length; _i < _len; _i++) {
         mixin = mixins[_i];
         for (k in mixin) {
-          this.prototype[k] = mixin[k];
+          if (key !== 'included' && key !== 'extended') {
+            this.prototype[k] = mixin[k];
+          }
         }
         if (mixin.included != null) {
           _results.push(mixin.included(this));
