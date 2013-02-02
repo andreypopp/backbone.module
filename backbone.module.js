@@ -14,11 +14,7 @@ var __slice = [].slice;
 })(this, function(Backbone, _arg) {
   var Module, extend;
   extend = _arg.extend;
-  extend(Backbone.Model, Module);
-  extend(Backbone.View, Module);
-  extend(Backbone.Collection, Module);
-  extend(Backbone.Router, Module);
-  return Module = (function() {
+  Module = (function() {
 
     function Module() {}
 
@@ -65,4 +61,9 @@ var __slice = [].slice;
     return Module;
 
   })();
+  extend(Backbone.Model, Module);
+  extend(Backbone.View, Module);
+  extend(Backbone.Collection, Module);
+  extend(Backbone.Router, Module);
+  return Module;
 });

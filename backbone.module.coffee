@@ -8,11 +8,6 @@
     root.Backbone.Module = factory(root.Backbone, root._)
 ) this, (Backbone, {extend}) ->
 
-  extend(Backbone.Model, Module)
-  extend(Backbone.View, Module)
-  extend(Backbone.Collection, Module)
-  extend(Backbone.Router, Module)
-
   class Module
 
     @extend: (mixins...) ->
@@ -26,3 +21,10 @@
         for k of mixin when key not in ['included', 'extended']
           this.prototype[k] = mixin[k]
         mixin.included(this) if mixin.included?
+
+  extend(Backbone.Model, Module)
+  extend(Backbone.View, Module)
+  extend(Backbone.Collection, Module)
+  extend(Backbone.Router, Module)
+
+  Module
