@@ -25,7 +25,7 @@ var __slice = [].slice;
       for (_i = 0, _len = mixins.length; _i < _len; _i++) {
         mixin = mixins[_i];
         for (k in mixin) {
-          if (key !== 'included' && key !== 'extended') {
+          if (k !== 'included' && k !== 'extended') {
             this[k] = mixin[k];
           }
         }
@@ -45,7 +45,7 @@ var __slice = [].slice;
       for (_i = 0, _len = mixins.length; _i < _len; _i++) {
         mixin = mixins[_i];
         for (k in mixin) {
-          if (key !== 'included' && key !== 'extended') {
+          if (k !== 'included' && k !== 'extended') {
             this.prototype[k] = mixin[k];
           }
         }

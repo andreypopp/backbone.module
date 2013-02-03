@@ -12,13 +12,13 @@
 
     @extend: (mixins...) ->
       for mixin in mixins
-        for k of mixin when key not in ['included', 'extended']
+        for k of mixin when k not in ['included', 'extended']
           this[k] = mixin[k]
         mixin.extended(this) if mixin.extended?
 
     @include: (mixins...) ->
       for mixin in mixins
-        for k of mixin when key not in ['included', 'extended']
+        for k of mixin when k not in ['included', 'extended']
           this.prototype[k] = mixin[k]
         mixin.included(this) if mixin.included?
 
