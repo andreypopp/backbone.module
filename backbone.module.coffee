@@ -3,7 +3,7 @@
     define ['backbone', 'underscore'], (Backbone, _) ->
       root.Backbone.Module = factory(Backbone, _)
   else if typeof require == 'function' and module?.exports?
-    module.exports = factory(require('backbone'), require('undercore'))
+    module.exports = factory(require('backbone'), require('underscore'))
   else
     root.Backbone.Module = factory(root.Backbone, root._)
 ) this, (Backbone, {extend}) ->

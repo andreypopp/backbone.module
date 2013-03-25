@@ -1,6 +1,6 @@
 {
   "name": "backbone.module",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Rubyish include and extend for Backbone",
   "main": "backbone.module.js",
   "dependencies": {
