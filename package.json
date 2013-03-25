@@ -1,0 +1,29 @@
+{
+  "name": "backbone.module",
+  "version": "0.3.0",
+  "description": "Rubyish include and extend for Backbone",
+  "main": "backbone.module.js",
+  "dependencies": {
+    "backbone": "~1.0.0",
+    "underscore": "~1.4.4"
+  },
+  "repository": {
+      "type": "git",
+      "url": "git://github.com/andreypopp/backbone.module.git"
+  },
+  "homepage": "https://github.com/andreypopp/backbone.module",
+  "keywords": [
+      "browser",
+      "backbone",
+      "events",
+      "mvc",
+      "module",
+      "ruby"
+  ],
+  "author": {
+      "name": "Andrey Popp",
+      "email": "8mayday@gmail.com",
+      "url": "http://andreypopp.com"
+  },
+  "license": "MIT"
+}
